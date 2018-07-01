@@ -1,0 +1,19 @@
+<div>
+  <div class="input">
+    <label>Name</label>
+    <input #name placeholder="Name"/>
+  </div>
+  <div class="input">
+    <label>Birthday</label>
+    <input #birthday placeholder="Birthday"/>
+  </div>
+  <div class="input">
+    <label>Deathday</label>
+    <input #deathday placeholder="deathday"/>
+  </div>
+  <br/><br/>
+
+  <button class="btn btn-dark"  (click)="addAuthor(name.value, birthday.value, deathday.value)">Add</button>
+
+  <button class="btn btn-dark"  (click)="goBack()">Go back</button>
+</div>

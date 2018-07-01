@@ -1,0 +1,19 @@
+<div *ngIf="author">
+  <div class="input">
+    <label>Name</label>
+    <input [(ngModel)]="author.name" placeholder="Name"/>
+  </div>
+  <div class="input">
+    <label>Birthday</label>
+    <input [(ngModel)]="author.birthday" placeholder="Birthday"/>
+  </div>
+  <div class="input">
+    <label>Deathday</label>
+    <input [(ngModel)]="author.deathday" placeholder="Deathday"/>
+  </div>
+  <br/><br/>
+
+  <button class="btn btn-dark"  (click)="editAuthor()">Edit</button>
+
+  <button  class="btn btn-dark" (click)="goBack()">Go back</button>
+</div>

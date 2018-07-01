@@ -1,0 +1,19 @@
+<div *ngIf="book">
+  <div class="input">
+    <label>Title</label>
+    <input [(ngModel)]="book.title" placeholder="Title"/>
+  </div>
+  <div class="input">
+    <label>Genre</label>
+    <input [(ngModel)]="book.genre" placeholder="Genre"/>
+  </div>
+  <div class="input">
+    <label>Year</label>
+    <input [(ngModel)]="book.year" placeholder="Year"/>
+  </div>
+  <br/><br/>
+
+  <button class="btn btn-dark"  (click)="editBook()">Edit</button>
+
+  <button class="btn btn-dark"  (click)="goBack()">Go back</button>
+</div>

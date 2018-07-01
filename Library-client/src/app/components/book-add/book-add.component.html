@@ -1,0 +1,19 @@
+<div>
+  <div class="input">
+    <label>Title</label>
+    <input #title placeholder="Title"/>
+  </div>
+  <div class="input">
+    <label>Genre</label>
+    <input #genre placeholder="Genre"/>
+  </div>
+  <div class="input">
+    <label>Year</label>
+    <input #year placeholder="Year"/>
+  </div>
+  <br/><br/>
+
+  <button class="btn btn-dark"  (click)="addBook(title.value, genre.value, year.value)">Add</button>
+
+  <button class="btn btn-dark"  (click)="goBack()">Go back</button>
+</div>

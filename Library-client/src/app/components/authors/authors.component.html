@@ -1,0 +1,23 @@
+<div class="container">
+  <table class="table table-light table-hover">
+    <thead>
+    <tr>
+      <th>Имя</th>
+      <th>Год Рождения</th>
+      <th>Год смерти</th>
+      <th>Изменить</th>
+      <th>Добавить книгу</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let author of authors">
+      <td>{{author.name}}</td>
+      <td>{{author.birthday}}</td>
+      <td>{{author.deathday}}</td>
+      <td><button type="button" class="btn btn-dark" (click)="editAuthor(author.id)">Edit</button></td>
+      <td><button type="button" class="btn btn-dark" (click)="addBook(author.id)">Add</button></td>
+    </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-dark" (click)="addAuthor()">Добавить автора</button>
+</div>

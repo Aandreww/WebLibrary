@@ -1,0 +1,17 @@
+<form (submit)="registration(username.value, password.value, confirmPassword.value)">
+  <div class="input">
+    <label>Username</label>
+    <input #username type="text" />
+  </div>
+  <div class="input">
+    <label>Password</label>
+    <input #password type="password" />
+  </div>
+  <div class="input">
+    <label>Confirm password</label>
+    <input #confirmPassword type="password" />
+  </div>
+  <div class="input">
+    <input type="submit" value="Registration" />
+  </div>
+</form>

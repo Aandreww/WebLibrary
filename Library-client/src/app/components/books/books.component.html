@@ -1,0 +1,30 @@
+<div class="container">
+<table class="table table-light table-hover">
+  <thead>
+  <tr>
+    <th>Название</th>
+    <th>Автор</th>
+    <th>Год издания</th>
+    <th>Жанр</th>
+    <th>Взять</th>
+    <th *ngIf="(user.role === 'Moder')||(user.role === 'Admin')">Изменить</th>
+    <th *ngIf="(user.role === 'Moder')||(user.role === 'Admin')">Удалить</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let book of books">
+    <td>{{book.title}}</td>
+    <td>{{book.authorId}}</td>
+    <td>{{book.year}}</td>
+    <td>{{book.genre}}</td>
+    <td><button type="button" class="btn btn-dark" (click)="addBookToUser(book.id)">Add</button></td>
+    <td *ngIf="(user.role === 'Moder')||(user.role === 'Admin')">
+      <button type="button" class="btn btn-dark" (click)="editBook(book.id)">Edit</button>
+    </td>
+    <td *ngIf="(user.role === 'Moder')||(user.role === 'Admin')">
+      <button type="button" class="btn btn-dark" (click)="deleteBook(book.id)">Delete</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
